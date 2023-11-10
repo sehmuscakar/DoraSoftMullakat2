@@ -1,0 +1,27 @@
+﻿@model List<DataAccessLayer.Entities.TopCategory>
+<section id="portfolio" class="portfolio">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>DoraSoft</h2>
+            <p>Her zaman her heryerde</p>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <ul id="portfolio-flters">
+                    <li data-filter="*" class="filter-active">Tüm Ürünler</li>
+                   
+                    @foreach (var item in Model)
+                    {
+                    <li data-filter=".@item.Name">@item.Name</li>
+                    }
+                
+                </ul>
+            </div>
+        </div>
+
+      
+
+    </div>
+</section>

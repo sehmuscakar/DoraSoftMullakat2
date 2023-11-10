@@ -1,0 +1,34 @@
+﻿@model DataAccessLayer.Entities.Category
+@{
+    ViewData["Title"] = "HomeFilter";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+
+
+<div class="card my-2">
+    <div class="card-body">
+
+        <form asp-action="IndexFilter" asp-controller="Home" method="get" id="filter">
+            <div class="form-group">
+                <input asp-for="Name" class="form-control" placeholder="Course name" value="@ViewBag.Name" />
+            </div>
+            <div class="form-group">
+                <input asp-for="Price" class="form-control" placeholder="Min Price" value="@ViewBag.Price" />
+            </div>
+
+            <div class="custom-control custom-checkbox mb-2">
+                <input asp-for="isActive" type="checkbox" class="custom-control-input" id="isActive" checked="@ViewBag.isActive" />
+            </div>
+
+            <button class="btn btn-primary">Filter</button>
+        </form>
+
+    </div>
+
+</div
+@await Component.InvokeAsync("CategoryList")
+

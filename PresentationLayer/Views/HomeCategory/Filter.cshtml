@@ -1,0 +1,32 @@
+﻿@model DataAccessLayer.Entities.Category
+@{
+    ViewData["Title"] = "Filter";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@await Component.InvokeAsync("TopCategory")
+
+
+<div class="card my-2">
+    <div class="card-body">
+
+        <form asp-action="Index" asp-controller="HomeCategory" method="get" id="filter">
+            <div class="form-group">
+                <input asp-for="Name" class="form-control" placeholder="Adı Giriniz" value="@ViewBag.Name" />
+            </div>
+            <div class="form-group">
+                <input asp-for="Price" class="form-control" placeholder="Minimum Tutarı giriniz" value="@ViewBag.Price" />
+            </div>
+
+            <div class="custom-control custom-checkbox mb-2">
+                <input asp-for="isActive" type="checkbox" class="custom-control-input" id="isActive" checked="@ViewBag.isActive" />
+            </div>
+
+            <button class="btn btn-primary">Filter</button>
+        </form>
+
+    </div>
+
+</div>
+@await Component.InvokeAsync("CategoryList")
+

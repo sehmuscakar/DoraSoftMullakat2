@@ -1,0 +1,11 @@
+﻿@model List<DataAccessLayer.Entities.ContactCompany>
+@foreach (var item in Model)
+{
+     <div class="logo me-auto">
+        <h1><a href="index.html">@item.CompanyName</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+         <a href="index.html"><img src="~/Img/@item.ImageUrlLogo" alt="" class="img-fluid"></a>
+      </div>
+  
+    <!-- End Logo -->
+}

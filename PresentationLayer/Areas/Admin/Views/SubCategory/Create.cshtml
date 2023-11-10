@@ -1,0 +1,39 @@
+﻿@model DataAccessLayer.Entities.SubCategoory
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<h4>Alt Kategori Ekleme Paneli</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+             <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class ="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Date" class="control-label"></label>
+                <input asp-for="Date" class="form-control" type="date"/>
+            </div>
+            <div class="form-group">
+                <label asp-for="TopCattegoryId" class="control-label"></label>
+                <input asp-for="TopCattegoryId" class ="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="CattegoryId" class="control-label"></label>
+                <input asp-for="CattegoryId" class ="form-control" />
+            </div>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Ekle" class="btn btn-outline-success" />
+            </div>
+        </form>
+    </div>
+</div>
+<hr />
+<div>
+    <a class="btn btn-secondary" asp-action="Index">Listeye Geri Dön</a>
+</div>

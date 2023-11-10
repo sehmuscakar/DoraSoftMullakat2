@@ -1,0 +1,50 @@
+﻿@model DataAccessLayer.Dtos.SubCategoryListDto
+@{
+    ViewData["Title"] = "SubCategory";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+        <section id="portfolio-details" class="portfolio-details">
+            <div class="container">
+
+                <div class="row gy-4">
+
+                    <div class="col-lg-8">
+                        <div class="portfolio-details-slider swiper">
+                            <div class="swiper-wrapper align-items-center">
+
+                                <div class="swiper-slide">
+                                    <img src="~/Img/@Model.ImageUrl" alt="">
+                                </div>
+
+                     
+
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="portfolio-info">
+                            <h3>Project information</h3>
+                            <ul>
+                                <li><strong>Ürün Adı</strong>:@Model.Name</li>
+                                <li><strong>Ürün Fiyatı</strong>:@Model.Price</li>
+                                <li><strong>Ürün Durumu</strong>:@Model.isActive</li>
+                                <li><strong>Tarih</strong>: @Model.Date</li>
+                                <li><strong>Category Adı</strong>: @Model.CattegoryName</li>
+                                <li><strong>Üst Category Adı</strong>: @Model.TopCattegoryName</li>
+                         
+                            </ul>
+                        </div>
+                        <div class="portfolio-description">
+                    <h2>Ürün Açıklaması</h2>
+                            <p>
+                        @Model.Description
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Portfolio Details Section -->

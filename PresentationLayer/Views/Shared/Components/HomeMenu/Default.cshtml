@@ -1,0 +1,5 @@
+﻿@model List<DataAccessLayer.Entities.HomeMenu>
+@foreach (var item in Model)
+{
+    <li><a class="nav-link scrollto active" href="@item.Link">@item.Name</a></li>
+}
